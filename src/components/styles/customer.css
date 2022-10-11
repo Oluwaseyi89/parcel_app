@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+
+@media screen and (min-width: 414px) {   
+   .Vendor-Frag {
+       margin-top: 80px;
+   }
+
+   .Vendor-Log-Legend {
+       text-align: center;
+       text-transform: uppercase;
+       font-weight: bold;
+       color: rgb(219, 33, 76);
+   }
+
+   .vendor-log-submit {
+       justify-content: center;
+       background-color: rgb(219, 33, 76);
+   }
+
+   .input-container {
+       display: flex;
+       flex-direction: column;
+   }
+}

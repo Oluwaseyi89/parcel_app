@@ -1,0 +1,182 @@
+@charset 'UTF-8';
+
+@media screen and (min-width: 414px) {   
+   .Vendor-Frag {
+       margin-top: 80px;
+   }
+
+   .Vendor-Log-Legend {
+       text-align: center;
+       text-transform: uppercase;
+       font-weight: bold;
+       color: rgb(219, 33, 76);
+   }
+
+   .vendor-log-submit {
+       justify-content: center;
+       background-color: rgb(219, 33, 76);
+   }
+
+   .input-container {
+       display: flex;
+       flex-direction: column;
+   }
+
+   #courierDealHeading {
+       font-size: 1em;
+       margin-top: 5px;
+       text-align: center;
+   }
+
+   .delivery-frag {
+       display: flex;
+       flex-direction: column;
+       border: solid rgb(219, 33, 76) 3px;
+       width: 90%;
+       margin-right: 5%;
+       margin-left: 5%;
+       margin-top: 10px;
+       border-top-right-radius: 15px;
+       border-bottom-left-radius: 15px;
+   }
+
+   .customer-info p {
+       font-size: 1.1em;
+   }
+
+   .customer-info {
+       border: solid orange 2px;
+       width: 45%;
+       border-radius: 8px;
+       padding: 7px;
+   }
+   
+   .info-container {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       padding: 10px;
+   }
+
+   .btn-frag {
+       height: 90px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .btn-frag button {
+       background-color: gray;
+       color: white;
+   }
+
+   .btn-frag button:hover {
+       background-color: rgb(219, 33, 76);
+       color: white;
+   }
+
+   #deal-count {
+       font-size: 1.2em;
+       text-align: center;
+       font-weight: bold;
+   }
+
+   .dispatch-item-container {
+       border: solid rgb(219, 33, 76) 3px;
+       width: 100%;
+       margin-top: 20px;
+       border-top-right-radius: 15px;
+       border-bottom-left-radius: 15px;
+       padding-left: 2%;
+       padding-right: 2%;
+   }
+
+   .delivery-yes {
+       color: green;
+   }
+
+   .delivery-no {
+       color: red
+   }
+
+   .dispatch-customer-detail {
+       display: flex;
+       flex-direction: column;
+       /* justify-content: space-around; */
+       /* align-items: center; */
+       height: 100%;
+       margin-bottom: 20px;
+       border-bottom: solid re;
+       /* flex-wrap: wrap; */
+   }
+
+   .dispatch-product-detail {
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       /* justify-content: space-around; */
+   }
+
+   .dispatch-img-container {
+       height: 150px;
+       width: 150px;
+       margin-bottom: 20px;
+   }
+
+   .dispatch-prod-img {
+       min-height: 100%;
+       min-width: 100%;
+   }
+
+   .dispatch-prod-container {
+       display: flex;
+       flex-direction: row;
+       border: solid orange 2px;
+       border-radius: 15px;
+       justify-content: space-between;
+       margin-bottom: 15px;
+       width: 100%;
+       
+       padding-left: 1%;
+       padding-right: 1%;
+   }
+
+   .grid-deals {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       flex-wrap: wrap;
+       /* overflow: scroll; */
+   }
+
+   /* .each-product-detail {
+       display: flex;
+       flex-direction: row;
+       border: solid orange 2px;
+       justify-content: space-between;
+   } */
+}
+
+@media screen and (min-width: 768px) {
+    .dispatch-customer-detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+ 
+    .dispatch-product-detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .dispatch-prod-container {
+        width: 390px;
+    }
+ 
+}

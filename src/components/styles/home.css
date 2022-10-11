@@ -1,0 +1,261 @@
+@charset 'UTF-8';
+
+@media screen and (min-width: 414px) {   
+  .prod-contain {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 20px;
+      /* border: solid red 3px; */
+  }
+
+  .prod-home-frag {
+      position: relative;
+      width: 350px;
+      /* border: solid chartreuse 3px; */
+      height: 350px;
+  }
+
+  .prod-name {
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 15px;
+    color: steelblue;
+  }
+
+  .prod-disc {
+    margin-left: 280px;
+    margin-top: 10px;
+    position: absolute;
+    font-size: 1.5em;
+    color: orange;
+  }
+
+  .prod-img {
+      max-height: 65%;
+      width: 100%;
+  }
+
+  .bottom-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      margin-top: 2px;
+      width: 90%;
+      margin-left: 10px;
+  }
+
+  .prod-desc {
+      width: 100%;
+      font-size: 0.8em;
+  }
+
+  .prod-price-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .prod-price-button button {
+     position: absolute;
+     background-color: steelblue;
+     color: white;
+     font-size: 0.8em;
+     margin-top: -7px;
+     margin-left: 270px;
+  }
+
+  .view-detail {
+    /* border: solid red 3px; */
+    min-width: 100%;
+    margin-top: 25px;
+  }
+
+  .view-detail p {
+    color: steelblue;
+  }
+
+  .view-detail label {
+    color: steelblue;
+  }
+
+  .view-detail img {
+    min-width: 100%;
+  }
+
+  .view-bottom input {
+    max-width: 50px;
+    text-align: center;
+  }
+
+  .incr-btn {
+    /* border: solid red 2px; */
+    width: 120px;
+    height: 40px;
+  }
+
+  .incr-btn button {
+    width: 33.33%;
+    min-height: 100%;
+  }
+
+  .incr-btn input {
+    width: 33.33%;
+    min-height: 100%;
+    border: none;
+    text-align: center;
+    color: rgb(219, 33, 76);
+  }
+
+  .incr-btn input:focus {
+    border: none;
+  }
+
+  .prod-qty {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .check-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 100%;
+    margin-left: 0px;
+  }
+
+  .check-btn button {
+    /* color: chartreuse; */
+    color: white;
+    /* color: rgb(219, 33, 76); */
+    font-size: 0.8em;
+    background-color: steelblue;
+  }
+
+  .vend-img-con {
+    max-width: 100px;
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vend-img-con p {
+    width: 150px;
+    text-align: center;
+  }
+
+  .prod-detail-ven-con {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .prod-det {
+    width: 150px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .prod-home-frag {
+    width: 320px;
+  }
+
+  .prod-disc {
+    margin-left: 250px;
+  }
+
+  .prod-price-button button {
+    margin-left: 240px;
+  }
+
+  .view-detail {
+    /* border: solid red 3px; */
+    min-width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    max-height: 350px;
+  }
+
+  .view-detail img {
+    min-width: 33.33%;
+  }
+
+  .view-bottom input {
+    max-width: 50px;
+    text-align: center;
+  }
+
+  .incr-btn {
+    /* border: solid red 2px; */
+    width: 120px;
+    height: 40px;
+  }
+
+  .incr-btn button {
+    width: 33.33%;
+    min-height: 100%;
+  }
+
+  .incr-btn input {
+    width: 33.33%;
+    min-height: 100%;
+    border: none;
+  }
+
+  .incr-btn input:focus {
+    border: none;
+  }
+
+  .prod-qty {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .check-btn {
+    margin-left: 80px;
+    width: 80px;
+  }
+
+  .vend-img-con {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .view-detail {
+    /* border: solid red 3px; */
+    max-width: 95%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    max-height: 350px;
+  }
+
+  .check-btn {
+    margin-left: 400px;
+    min-width: 350px;
+  }
+
+  .view-detail img {
+    max-width: 33.33%;
+  }
+
+  .vend-img-con img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .vend-img-con {
+   padding-right: 5px;
+  }
+}

@@ -1,0 +1,23 @@
+###
+
+GET http://localhost:7000/parcel_product/get_prod
+
+
+###
+POST http://localhost:8080/v1/initializetransaction HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "amosbaba12@gmail.com",
+    "amount": 50000000
+}
+
+
+###
+GET http://localhost:7000/parcel_backends/get_ven/
+
+###
+GET http://localhost:8080/v1/verifypaydetail/afysegkdxd
+
+###
+GET http://localhost:7000/parcel_dispatch/get_dispatch_from_db

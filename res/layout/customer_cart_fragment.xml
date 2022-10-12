@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customerhome.CustomerCartFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <ListView
+            android:id="@+id/cartListView"
+            android:layout_width="400dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/totItems"
+                android:layout_width="380dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical"
+                android:text="Total Items:"
+                android:textColor="@color/neon_red"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                android:id="@+id/totAmount"
+                android:layout_width="380dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center_vertical"
+                android:text="Total Amount:"
+                android:textColor="@color/neon_red"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+            <Spinner
+                android:id="@+id/shippingMethod"
+                android:layout_width="380dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:spinnerMode="dropdown" />
+
+            <View
+                android:id="@+id/shippingLine"
+                android:layout_width="380dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/neon_red"
+                android:layout_marginTop="0dp"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+
+            <EditText
+                android:id="@+id/zipcode"
+                android:layout_width="380dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Zip Code"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="number"
+                />
+
+            <View
+                android:id="@+id/zipcodeLine"
+                android:layout_width="380dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/neon_red"
+                android:layout_marginTop="0dp"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/checkOut"
+                android:layout_width="380dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/button_bg_neon"
+                android:text="Proceed to Payment"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@drawable/btn_txt_neon"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

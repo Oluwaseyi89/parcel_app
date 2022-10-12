@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/delProImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/venResponse"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Vendor Response:" />
+
+            <TextView
+                android:id="@+id/courResponse"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Courier Response:" />
+
+            <TextView
+                android:id="@+id/delRowStatus"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Delivery Status:" />
+
+            <TextView
+                android:id="@+id/delRowOrderId"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Order Id:" />
+
+            <TextView
+                android:id="@+id/delRowProduct"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Product:" />
+
+            <TextView
+                android:id="@+id/delRowModel"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Model:" />
+
+            <TextView
+                android:id="@+id/delRowPrice"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Price:" />
+
+            <TextView
+                android:id="@+id/delRowQty"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Quantity:" />
+
+            <TextView
+                android:id="@+id/delRowAmount"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Amount:" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="100dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:text="I received this:"/>
+
+                <CheckBox
+                    android:id="@+id/delReceiveThis"
+                    android:layout_width="30dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp"
+                    app:buttonTint="@color/neon_red"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

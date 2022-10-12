@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/login_bg"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_bg"
+                android:shadowColor="@color/silver"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@drawable/btn_txt_color"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/divText"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/userCat" />
+
+            <EditText
+                android:id="@+id/ipAddress"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/ip_add_192_168_42_111"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/ipAddLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/ipAddress"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                android:background="@color/neon_red"
+                />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/ipAddLine"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+            <EditText
+                android:id="@+id/userEmail"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="example@gmail.com"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/gray"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@id/logo" />
+            <View
+                android:id="@+id/emailLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/userEmail"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                android:background="@color/neon_red"
+                />
+
+
+            <EditText
+                android:id="@+id/userPassword"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="**************"
+                android:inputType="textPassword"
+                android:textColorHint="@color/gray"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/emailLine" />
+
+            <View
+                android:id="@+id/passwordLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/userPassword"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                android:background="@color/neon_red"
+                />
+
+            <TextView
+                android:id="@+id/catTv"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="256dp"
+                android:gravity="start"
+                android:text="@string/choose_category"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@id/passwordLine" />
+
+            <RadioGroup android:id="@+id/userCat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/catTv"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline">
+
+                <RadioButton
+                    android:id="@+id/customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/neon_red"
+                    android:text="@string/customer"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/vendor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/neon_red"
+                    android:text="@string/vendor"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/courier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/neon_red"
+                    android:text="@string/courier"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/divLineStart"
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="100dp"
+                android:background="@color/pearl_white"
+                app:layout_constraintEnd_toStartOf="@+id/divText"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintBottom_toTopOf="@+id/regBtn"
+                app:layout_constraintTop_toBottomOf="@+id/userCat" />
+
+            <TextView
+                android:id="@+id/divText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="Or"
+                android:textColor="@color/pearl_white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@id/divLineEnd"
+                app:layout_constraintStart_toEndOf="@+id/divLineStart"
+                app:layout_constraintBottom_toTopOf="@+id/regBtn"
+                app:layout_constraintTop_toBottomOf="@id/userCat" />
+
+
+
+            <View
+                android:id="@+id/divLineEnd"
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="100dp"
+                app:layout_constraintStart_toEndOf="@+id/divText"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintBottom_toTopOf="@+id/regBtn"
+                app:layout_constraintTop_toBottomOf="@+id/userCat"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                android:background="@color/pearl_white"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/regBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/divText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="190dp"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textColor="@drawable/btn_txt_color"
+                android:background="@drawable/button_bg"
+                android:shadowColor="@color/silver"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="60dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="60dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

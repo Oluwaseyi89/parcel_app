@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/pearl_white">
+
+    <ImageView
+        android:id="@+id/prod_photo"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prod_desc"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prod_name"
+        android:layout_width="165dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prod_desc" />
+
+    <TextView
+        android:id="@+id/prod_model"
+        android:layout_width="165dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prod_name" />
+
+    <TextView
+        android:id="@+id/prod_rating"
+        android:layout_width="165dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prod_model" />
+
+    <TextView
+        android:id="@+id/prod_price"
+        android:layout_width="165dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prod_rating" />
+
+    <TextView
+        android:id="@+id/prod_qty"
+        android:layout_width="165dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prod_price" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buyNow"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:shadowColor="@color/silver"
+        android:text="Buy Now"
+        android:textAllCaps="false"
+        android:textColor="@drawable/btn_txt_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addToCart"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:shadowColor="@color/silver"
+        android:text="Add to Cart"
+        android:textAllCaps="false"
+        android:textColor="@drawable/btn_txt_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyNow"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/removeFromCart"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:shadowColor="@color/silver"
+        android:text="Remove"
+        android:textAllCaps="false"
+        android:textColor="@drawable/btn_txt_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addToCart"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/incrementQty"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="412dp"
+        android:layout_marginTop="220dp"
+        android:shadowColor="@color/silver"
+        android:text="+"
+        android:textAllCaps="false"
+        android:textColor="@drawable/btn_txt_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addedQty"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="220dp"
+        android:gravity="center"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@id/incrementQty"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/decrementQty"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/decrementQty"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="220dp"
+        android:shadowColor="@color/silver"
+        android:text="-"
+        android:textAllCaps="false"
+        android:textColor="@drawable/btn_txt_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addedQty"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

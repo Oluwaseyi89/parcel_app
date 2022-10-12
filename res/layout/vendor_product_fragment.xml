@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vendorhome.VendorProductFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/venProdBottomGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="650dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/venProdLeftGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="50dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/venProdRightGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="50dp" />
+
+        <TextView
+            android:id="@+id/prodFormTitle"
+            android:layout_width="195dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="PRODUCT UPLOAD"
+            android:textSize="18sp"
+            android:textColor="@color/neon_red"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/venProdRightGuide"
+            app:layout_constraintStart_toStartOf="@id/venProdLeftGuide"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/prodImgPath"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/select_photo_bg"
+            android:gravity="center"
+            android:text="@string/select_photo"
+            android:textColor="@color/neon_red"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/venProdLeftGuide"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/prodImg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="@id/venProdRightGuide"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/venProdCat"
+            android:layout_width="370dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="125dp"
+            android:text="Product Category"
+            android:gravity="center"
+            android:ems="10"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintStart_toStartOf="@+id/venProdLeftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/prodFormTitle" />
+
+        <View
+            android:id="@+id/prodCatLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/neon_red"
+            app:layout_constraintStart_toEndOf="@+id/venProdLeftGuide"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintTop_toBottomOf="@id/venProdCat"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            />
+
+        <EditText
+            android:id="@+id/venProdName"
+            android:layout_width="370dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/plain_text"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:hint="Product Name"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintStart_toStartOf="@+id/venProdLeftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/prodCatLine" />
+
+        <View
+            android:id="@+id/prodNameLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/neon_red"
+            app:layout_constraintStart_toEndOf="@+id/venProdLeftGuide"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintTop_toBottomOf="@id/venProdName"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+
+        <EditText
+            android:id="@+id/venProdModel"
+            android:layout_width="370dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/plain_text"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:hint="Product Model"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintStart_toStartOf="@+id/venProdLeftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/prodNameLine" />
+
+        <View
+            android:id="@+id/prodModelLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/neon_red"
+            app:layout_constraintStart_toEndOf="@+id/venProdLeftGuide"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintTop_toBottomOf="@id/venProdModel"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+
+        <EditText
+            android:id="@+id/venProdPrice"
+            android:layout_width="370dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/plain_text"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:hint="Product Price"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintStart_toStartOf="@+id/venProdLeftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/prodModelLine" />
+
+        <View
+            android:id="@+id/prodPriceLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/neon_red"
+            app:layout_constraintStart_toEndOf="@+id/venProdLeftGuide"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintTop_toBottomOf="@id/venProdPrice"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+
+        <EditText
+            android:id="@+id/venProdDiscount"
+            android:layout_width="370dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/plain_text"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:hint="Percentage Discount Allowed(Figure Only)"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintStart_toStartOf="@+id/venProdLeftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/prodPriceLine" />
+
+        <View
+            android:id="@+id/prodDiscountLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/neon_red"
+            app:layout_constraintStart_toEndOf="@+id/venProdLeftGuide"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintTop_toBottomOf="@id/venProdDiscount"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+
+        <EditText
+            android:id="@+id/venProdQuantity"
+            android:layout_width="370dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/plain_text"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:hint="Product Quantity"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintStart_toStartOf="@+id/venProdLeftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/prodDiscountLine" />
+
+        <View
+            android:id="@+id/prodQuantityLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/neon_red"
+            app:layout_constraintStart_toEndOf="@+id/venProdLeftGuide"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintTop_toBottomOf="@id/venProdQuantity"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+
+        <EditText
+            android:id="@+id/venProdDescription"
+            android:layout_width="370dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/plain_text"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:hint="Product Description"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintStart_toStartOf="@+id/venProdLeftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/prodQuantityLine" />
+
+        <View
+            android:id="@+id/prodDescriptionLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/neon_red"
+            app:layout_constraintStart_toEndOf="@+id/venProdLeftGuide"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintTop_toBottomOf="@id/venProdDescription"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/uploadProduct"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/button_bg_neon"
+            android:text="Upload Product"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_txt_neon"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/venProdBottomGuide"
+            app:layout_constraintEnd_toStartOf="@+id/venProdRightGuide"
+            app:layout_constraintStart_toStartOf="@+id/venProdLeftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/prodDescriptionLine" />
+
+
+        <TextView
+            android:id="@+id/uploadedProdTitle"
+            android:layout_width="195dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="Uploaded Products"
+            android:textSize="18sp"
+            android:textColor="@color/neon_red"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/venProdRightGuide"
+            app:layout_constraintStart_toStartOf="@id/venProdLeftGuide"
+            app:layout_constraintTop_toTopOf="@id/venProdBottomGuide" />
+
+
+        <ListView
+            android:id="@+id/venProdListView"
+            android:layout_height="1000dp"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toBottomOf="@id/uploadedProdTitle"
+            app:layout_constraintStart_toStartOf="@id/venProdLeftGuide"
+            app:layout_constraintEnd_toEndOf="@id/venProdRightGuide"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

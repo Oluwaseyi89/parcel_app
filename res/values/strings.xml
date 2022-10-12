@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Parcel App</string>
+    <string name="ip_add_192_168_42_111">IP Add: 192.168.42.111</string>
+    <string name="courier">Courier</string>
+    <string name="vendor">Vendor</string>
+    <string-array  name="business_categories">
+        <item>Business_Category</item>
+        <item>Clothing</item>
+        <item>Chemicals</item>
+        <item>Electronics</item>
+        <item>Educative_Materials</item>
+        <item>Furniture</item>
+        <item>Kitchen_Utensils</item>
+        <item>Plastics</item>
+        <item>Spare_Parts</item>
+        <item>General_Merchandise</item>
+    </string-array>
+    <string-array name="shipping_methods">
+        <item>Shipping_Method</item>
+        <item>Delivery</item>
+        <item>Pick_Up</item>
+    </string-array>
+    <string name="customer">Customer</string>
+    <string name="choose_category">Choose Category:</string>
+    <string name="vendor_registration_form">VENDOR REGISTRATION FORM</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="courier_registration_form">COURIER REGISTRATION FORM</string>
+    <string name="title_activity_register_customer">RegisterCustomerActivity</string>
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="customer_registration_form">CUSTOMER REGISTRATION FORM</string>
+
+    <string name="customer_home">Home</string>
+    <string name="customer_hot_deals">Hot Deals</string>
+    <string name="customer_catalogue">Catalogue</string>
+    <string name="customer_cart">Cart</string>
+    <string name="customer_orders">Orders</string>
+    <string name="customer_deliveries">Deliveries</string>
+</resources>

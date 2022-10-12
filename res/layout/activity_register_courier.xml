@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pearl_white"
+    tools:context=".RegisterCourierActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:id="@+id/potImgCour"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="80dp"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@+id/formTitleCour"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/imgPathCour"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/select_photo_bg"
+                android:gravity="center"
+                android:text="@string/select_photo"
+                android:textColor="@color/neon_red"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/potImgCour"
+                app:layout_constraintHorizontal_bias="0.336"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/formTitleCour"
+                app:layout_constraintVertical_bias="0.073" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registerCour"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_bg_neon"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@drawable/btn_txt_neon"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/courPolicy" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/regCourGleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="70dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/regCourGright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="70dp" />
+
+            <TextView
+                android:id="@+id/formTitleCour"
+                android:layout_width="393dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/courier_registration_form"
+                android:textColor="@color/neon_red"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/courFirName"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="170dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="First Name"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/formTitleCour" />
+
+            <View
+                android:id="@+id/firNameLineCour"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courFirName"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/courLasName"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Last Name"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/firNameLineCour" />
+
+            <View
+                android:id="@+id/lasNameLineCour"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courLasName"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/courBusCon"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Business Country"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/lasNameLineCour" />
+
+            <View
+                android:id="@+id/courBusConLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courBusCon"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/courBusSta"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Business State/Province"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/courBusConLine" />
+
+            <View
+                android:id="@+id/courBusStaLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courBusSta"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/courBusStr"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Business Street Address"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/courBusStaLine" />
+
+            <View
+                android:id="@+id/courBusStrLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courBusStr"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+
+            <EditText
+                android:id="@+id/courCacNo"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Business CAC Reg. No"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/courBusStrLine" />
+
+            <View
+                android:id="@+id/courCacLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courCacNo"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/courNin"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="National Identification Number (NIN)"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/courCacLine" />
+
+            <View
+                android:id="@+id/courNinLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courNin"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/courPhone"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Phone Number"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="phone"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/courNinLine" />
+
+            <View
+                android:id="@+id/courPhoneLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courPhone"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/courEmail"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Email Address"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/courPhoneLine" />
+
+            <View
+                android:id="@+id/courEmailLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courEmail"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/courPassword"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Password"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/courEmailLine" />
+
+            <View
+                android:id="@+id/courPasswordLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courPassword"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/courRetPass"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Retype Password"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@+id/courPasswordLine" />
+
+            <View
+                android:id="@+id/courRetPassLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintTop_toBottomOf="@id/courRetPass"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <TextView
+                android:id="@+id/courPolicyLink"
+                android:layout_width="208dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="17dp"
+                android:gravity="center"
+                android:text="Read our Courier Policy here..."
+                android:textColor="@color/neon_red"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.071"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@id/courRetPassLine" />
+
+            <CheckBox
+                android:id="@+id/courPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                app:buttonTint="@color/neon_red"
+                android:text="Click to Accept"
+                android:textColor="@color/neon_red"
+                android:textColorHighlight="@color/neon_red"
+                android:textColorLink="@color/neon_red"
+                app:layout_constraintEnd_toStartOf="@+id/regCourGright"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toEndOf="@+id/regCourGleft"
+                app:layout_constraintTop_toBottomOf="@id/courPolicyLink" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

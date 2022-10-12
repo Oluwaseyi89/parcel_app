@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pearl_white"
+    tools:context=".RegisterVendorActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <ImageView
+                android:id="@+id/potImg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="80dp"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@+id/formTitle"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/imgPath"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/select_photo_bg"
+                android:gravity="center"
+                android:text="@string/select_photo"
+                android:textColor="@color/neon_red"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/potImg"
+                app:layout_constraintHorizontal_bias="0.336"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/formTitle"
+                app:layout_constraintVertical_bias="0.073" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registerVen"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_bg_neon"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@drawable/btn_txt_neon"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/venPolicy" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/regVenGleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="70dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/regVenGright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="70dp" />
+
+            <TextView
+                android:id="@+id/formTitle"
+                android:layout_width="393dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/vendor_registration_form"
+                android:textColor="@color/neon_red"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/venFirName"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="170dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="First Name"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/formTitle" />
+
+            <View
+                android:id="@+id/firNameLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venFirName"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/venLasName"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Last Name"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/firNameLine" />
+
+            <View
+                android:id="@+id/lasNameLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venLasName"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/venBusCon"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Business Country"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/lasNameLine" />
+
+            <View
+                android:id="@+id/venBusConLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venBusCon"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/venBusSta"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Business State/Province"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/venBusConLine" />
+
+            <View
+                android:id="@+id/venBusStaLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venBusSta"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/venBusStr"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Business Street Address"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/venBusStaLine" />
+
+            <View
+                android:id="@+id/venBusStrLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venBusStr"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <Spinner
+                android:id="@+id/venbusCategory"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="@+id/regVenGright"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/venBusStrLine" />
+
+            <View
+                android:id="@+id/venBusCatLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venbusCategory"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/venCacNo"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Business CAC Reg. No"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/venBusCatLine" />
+
+            <View
+                android:id="@+id/venCacLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venCacNo"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/venNin"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="National Identification Number (NIN)"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/venCacLine" />
+
+            <View
+                android:id="@+id/venNinLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venNin"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/venPhone"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Phone Number"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="phone"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/venNinLine" />
+
+            <View
+                android:id="@+id/venPhoneLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venPhone"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/venEmail"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Email Address"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/venPhoneLine" />
+
+            <View
+                android:id="@+id/venEmailLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venEmail"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/venPassword"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Password"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/venEmailLine" />
+
+            <View
+                android:id="@+id/venPasswordLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venPassword"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/venRetPass"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Retype Password"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@+id/venPasswordLine" />
+
+            <View
+                android:id="@+id/venRetPassLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintTop_toBottomOf="@id/venRetPass"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <TextView
+                android:id="@+id/venPolicyLink"
+                android:layout_width="208dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="17dp"
+                android:gravity="center"
+                android:text="Read our Vendor Policy here..."
+                android:textColor="@color/neon_red"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.071"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@id/venRetPassLine" />
+
+            <CheckBox
+                android:id="@+id/venPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                app:buttonTint="@color/neon_red"
+                android:text="Click to Accept"
+                android:textColor="@color/neon_red"
+                android:textColorHighlight="@color/neon_red"
+                android:textColorLink="@color/neon_red"
+                app:layout_constraintEnd_toStartOf="@+id/regVenGright"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toEndOf="@+id/regVenGleft"
+                app:layout_constraintTop_toBottomOf="@id/venPolicyLink" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

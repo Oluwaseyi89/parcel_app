@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pearl_white"
+    tools:context=".RegisterCustomerActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/formTitleCus"
+                android:layout_width="393dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:text="@string/customer_registration_form"
+                android:textColor="@color/neon_red"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/regCusGleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="70dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/regCusGright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="70dp" />
+
+
+            <EditText
+                android:id="@+id/cusFirName"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="First Name"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toBottomOf="@+id/formTitleCus" />
+
+            <View
+                android:id="@+id/firNameLineCus"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCusGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintTop_toBottomOf="@id/cusFirName"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/cusLasName"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Last Name"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toBottomOf="@+id/firNameLineCus" />
+
+            <View
+                android:id="@+id/lasNameLineCus"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCusGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintTop_toBottomOf="@id/cusLasName"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/cusCon"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Country"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toBottomOf="@+id/lasNameLineCus" />
+
+            <View
+                android:id="@+id/cusConLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCusGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintTop_toBottomOf="@id/cusCon"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/cusSta"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="State/Province"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toBottomOf="@+id/cusConLine" />
+
+            <View
+                android:id="@+id/cusStaLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCusGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintTop_toBottomOf="@id/cusSta"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/cusStr"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Street Address"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toBottomOf="@+id/cusStaLine" />
+
+            <View
+                android:id="@+id/cusStrLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCusGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintTop_toBottomOf="@id/cusStr"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+
+
+            <EditText
+                android:id="@+id/cusPhone"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Phone Number"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="phone"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toBottomOf="@+id/cusStrLine" />
+
+            <View
+                android:id="@+id/cusPhoneLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCusGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintTop_toBottomOf="@id/cusPhone"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/cusEmail"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Email Address"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toBottomOf="@+id/cusPhoneLine" />
+
+            <View
+                android:id="@+id/cusEmailLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCusGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintTop_toBottomOf="@id/cusEmail"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/cusPassword"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Password"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toBottomOf="@+id/cusEmailLine" />
+
+            <View
+                android:id="@+id/cusPasswordLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCusGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintTop_toBottomOf="@id/cusPassword"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+            <EditText
+                android:id="@+id/cusRetPass"
+                android:layout_width="370dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/plain_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:hint="Retype Password"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toBottomOf="@+id/cusPasswordLine" />
+
+            <View
+                android:id="@+id/cusRetPassLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/neon_red"
+                app:layout_constraintStart_toEndOf="@+id/regCusGleft"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintTop_toBottomOf="@id/cusRetPass"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registerCus"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_bg_neon"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@drawable/btn_txt_neon"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/regCusGright"
+                app:layout_constraintStart_toStartOf="@+id/regCusGleft"
+                app:layout_constraintTop_toBottomOf="@+id/cusRetPassLine" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

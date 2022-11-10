@@ -45,7 +45,7 @@ const CourierDispatch = () => {
     const reducer = (state, action) => {
 
         if(action.type === "GET_DISPATCHABLES") {
-            let setData = action.payload.filter((data) => data.courier_email === loggedCour.email);
+            let setData = action.payload.filter((data) => data.courier_email === loggedCour.email && !data.is_received);
             return {...state, dispatchables: setData}
         }
 

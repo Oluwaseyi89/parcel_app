@@ -21,4 +21,9 @@
        display: flex;
        flex-direction: column;
    }
+
+   .complaint-btn {
+       background-color: rgb(219, 33, 76);
+       width: 100%;
+   }
 }

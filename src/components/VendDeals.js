@@ -40,7 +40,7 @@ const VendDeals = () => {
            let vendDealCollectn = [];
         action.payload.forEach((deal) => {
             deal.products.forEach((prod) => {
-                if(prod.vendor_phone === logvend.phone_no) vendDealCollectn.push(prod);
+                if(prod.vendor_phone === logvend.phone_no && !prod.is_received) vendDealCollectn.push(prod);
             })            
         });
       

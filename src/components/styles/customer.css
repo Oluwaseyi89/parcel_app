@@ -1,29 +1,61 @@
 @charset 'UTF-8';
 
-@media screen and (min-width: 414px) {   
-   .Vendor-Frag {
-       margin-top: 80px;
-   }
+@media screen and (min-width: 414px) {
+  .Vendor-Frag {
+    margin-top: 80px;
+  }
 
-   .Vendor-Log-Legend {
-       text-align: center;
-       text-transform: uppercase;
-       font-weight: bold;
-       color: rgb(219, 33, 76);
-   }
+  .Vendor-Log-Legend {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(219, 33, 76);
+  }
 
-   .vendor-log-submit {
-       justify-content: center;
-       background-color: rgb(219, 33, 76);
-   }
+  .vendor-log-submit {
+    justify-content: center;
+    background-color: rgb(219, 33, 76);
+  }
 
-   .input-container {
-       display: flex;
-       flex-direction: column;
-   }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
 
-   .complaint-btn {
-       background-color: rgb(219, 33, 76);
-       width: 100%;
-   }
+  .complaint-btn {
+    background-color: rgb(219, 33, 76);
+    width: 100%;
+    color: white;
+  }
+
+  .complain-div {
+    height: 100%;
+    border: solid orange 2px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-top: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 40px;
+  }
+
+  .complain-div input[type="checkbox"] {
+    background:rgb(219, 33, 76);
+  }
+
+  .complain-list {
+    list-style: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .complain-div {
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 3px 3px 5px 3px silver;
+  }
+
 }

@@ -1,6 +1,6 @@
 import './styles/vendor.css';
 import './styles/product.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { UseFetchJSON } from './useFetch';
 // import { Link } from 'react-router-dom';
 // import CSRFTOKEN from './CSRFTOKEN';
@@ -21,6 +21,10 @@ const VendTransactions = () => {
 
     const [banksus, setBankSus] = useState("");
     const [bankerr, setBankErr] = useState("");
+
+    const [fetchedDetails, setFetchedDetails] = useState({});
+
+    let fetchedData = {};
 
     let logvend = JSON.parse(localStorage.getItem('logvend'));
 
@@ -102,6 +106,19 @@ const VendTransactions = () => {
         setShowBank(false);
         setShowTxn(true);
     }
+
+    useEffect(() => {
+        let apiUrl = `http://localhost:7000/parcel_backends/get_dist_vend_bank/${logvend.email}/`;
+        let apiOperation = UseFetchJSON(apiUrl, "GET");
+        apiOperation.then((res) => {
+            if (res.status === "success") {
+                setFetchedDetails(res.data);
+            } else if (res.status === "error") {
+                setBankErr(res.data);
+            }
+        }).catch((err) => setBankErr(err.message));
+
+    }, [logvend.email]);
    
     return (
         <div className="Vendor-Frag">
@@ -121,20 +138,20 @@ const VendTransactions = () => {
                                     <button  className='close' role='alert' data-dismiss='alert'><span>&times;</span></button>
                     </div>): ""}
                     <div className='form-group'>
-                        <input onChange={handleBankDetailChange} name='bank_name' value={bank_name} type='text' className='form-control' placeholder='Bank Name'/>
+                        <input onChange={handleBankDetailChange} name='bank_name' value={bank_name} type='text' className='form-control' placeholder={fetchedDetails.bank_name? fetchedDetails.bank_name : 'Bank Name'}/>
                     </div>
                     <div className='form-group'>
                         <select onChange={handleBankDetailChange} name='account_type' value={account_type} className='form-control'>
-                            <option>Select Account Type</option>
+                            <option>{fetchedDetails.account_type? fetchedDetails.account_type : 'Select Account Type'}</option>
                             <option>Savings</option>
                             <option>Current</option>
                         </select>
                     </div>
                     <div className='form-group'>
-                        <input onChange={handleBankDetailChange} name='account_name' value={account_name} type='text' className='form-control' placeholder='Account Name'/>
+                        <input onChange={handleBankDetailChange} name='account_name' value={account_name} type='text' className='form-control' placeholder={fetchedDetails.account_name? fetchedDetails.account_name : 'Account Name'}/>
                     </div>
                     <div className='form-group'>
-                        <input onChange={handleBankDetailChange} name='account_no' value={account_no} type='text' className='form-control' placeholder='Account Number'/>
+                        <input onChange={handleBankDetailChange} name='account_no' value={account_no} type='text' className='form-control' placeholder={fetchedDetails.account_no ? fetchedDetails.account_no : 'Account Number'}/>
                     </div>
                     <div className='bank-btn-group'>
                         <button onClick={handleBankDetailSubmit} className='btn prod-button'>Save</button>
